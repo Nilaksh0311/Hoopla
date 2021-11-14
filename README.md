@@ -33,7 +33,7 @@ node app.js
 ```bash
 ng serve
 ```
-
+![Screenshot (842)](https://user-images.githubusercontent.com/49091879/141676106-1069b1f7-c8f7-4d51-9485-6c56c924969b.png)
 
 Go to browser and hit the following url -  
 ```bash
