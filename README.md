@@ -29,11 +29,20 @@ For Usage of application move to respective micro-service directory/src and run 
 ```bash
 node app.js
 ```
+![Screenshot (842)](https://user-images.githubusercontent.com/49091879/141676106-1069b1f7-c8f7-4d51-9485-6c56c924969b.png)
+![Screenshot (843)](https://user-images.githubusercontent.com/49091879/141676178-1752c46e-74c5-4eda-b6ab-822a45b07cb9.png)
+![Screenshot (844)](https://user-images.githubusercontent.com/49091879/141676179-1ff32f40-42fb-45a8-b1ed-b6638887999d.png)
+![Screenshot (845)](https://user-images.githubusercontent.com/49091879/141676181-edc5def0-6e0a-4183-809d-ef1d9e820bba.png)
+![Screenshot (846)](https://user-images.githubusercontent.com/49091879/141676182-464ae338-90d2-4182-b501-e9476b84cb9c.png)
+![Screenshot (847)](https://user-images.githubusercontent.com/49091879/141676183-f9c51cd4-edf5-431c-a7bb-f5203604d139.png)
+![Screenshot (848)](https://user-images.githubusercontent.com/49091879/141676184-1eb37783-fdf1-45e4-85c5-2d7ae3656f68.png)
+![Screenshot (849)](https://user-images.githubusercontent.com/49091879/141676185-bee0a905-823a-4a8e-a3fe-617ce9030749.png)
+
  For running Angular application move to hoopla-ui directory and run following command in terminal  
 ```bash
 ng serve
 ```
-![Screenshot (842)](https://user-images.githubusercontent.com/49091879/141676106-1069b1f7-c8f7-4d51-9485-6c56c924969b.png)
+
 
 Go to browser and hit the following url -  
 ```bash
