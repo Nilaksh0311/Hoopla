@@ -1,0 +1,9 @@
+.cart-empty {
+  display: block;
+  margin: 0 auto;
+}
+.align {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}

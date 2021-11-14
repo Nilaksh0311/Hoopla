@@ -1,0 +1,85 @@
+<div class="align" *ngIf="cartData.length === 0; else showCart">
+  <img class="cart-empty" src="../../assets/no_wish_list.png" alt="" />
+  <button class="mt-3 px-2 py-2" [routerLink]="['/dashboard']" mat-raised-button color="primary">Continue Shopping</button>
+</div>
+<ng-template #showCart>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 col-md-7 col-sm-12">
+        <h1>You have {{ cartData.length }} product in the cart!</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="m-3" *ngFor="let column of columnsToDisplay">
+                {{ column | titlecase }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ele of cartData; let i = index">
+              <td>{{ ele.prodName }}</td>
+              <td>
+                <!-- <input
+                  class="form-control"
+                  type="number"
+                  value="{{ ele.qty }}"
+                  [(ngModel)]="cartData[i].qty"
+                  (keyup)="qtyValue(ele.qty, i, ele.price)"
+                /> -->
+                
+                <span (click)="decreaseQuantity(ele.qty,i)" class="mt-2 material-icons">
+                  remove_circle_outline 
+                </span>
+                  <span>{{ ele.qty }}</span>
+                <span (click)="increaseQuantity(ele.qty,i)" class="mt-2 material-icons">
+                  add_circle_outline
+                </span>
+                
+              </td>
+              <td>{{ ele.discountedPrice | currency : 'INR' : 'symbol' : '1.2-2' }}</td>
+              <td>
+                <button
+                  (click)="deleteProduct(ele.userId, ele.prodId)"
+                  mat-button
+                >
+                  <span class="material-icons">delete</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-12 col-md-3 offset-2 mt-5">
+        <h2>Price Details:</h2>
+        <table class="table">
+          <tr>
+            <th>Total Quantity:</th>
+            <td>{{ totalQty }}</td>
+          </tr>
+          <tr>
+            <th>Cart Total(MRP):</th>
+            <td>{{ totalPrice | currency : 'INR' : 'symbol' : '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <th>Total Tax(17%):</th>
+            <td>{{ totalTax | currency : 'INR' : 'symbol' : '1.2-2' }}</td>
+          </tr>
+          <tr>
+            <th>Total Amount:</th>
+            <td>{{ totalAmount | currency : 'INR' : 'symbol' : '1.2-2' }}</td>
+          </tr>
+        </table>
+        <button
+          (click)="checkout()"
+          class="form-control"
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/orders']"
+          id='checkout'
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

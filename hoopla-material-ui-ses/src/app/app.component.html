@@ -1,0 +1,93 @@
+<mat-toolbar color="primary">
+  <span
+    ><button
+      mat-raised-button
+      color="primary"
+      [routerLink]="['/dashboard']"
+      class="navbar-brand"
+      matTooltip="home page"
+    >
+      Hoopla <mat-icon>home</mat-icon>
+    </button></span
+  >
+  <span>
+    &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input
+        #searchInput
+        class="searchIcon"
+        type="text"
+        matInput
+        placeholder="search"
+        (keydown.enter)="searchProducts(searchInput.value)"
+        matTooltip="search item by name"
+      />
+      <mat-icon (click)="searchProducts(searchInput.value)">search</mat-icon>
+    </mat-form-field>
+  </span>
+  <span class="example-fill-remaining-space"> </span>
+
+  <ng-container *ngIf="log.isLogged">
+    <span class="mx-3">Welcome {{ loggedUser.uProfile.uName | titlecase }}</span>&nbsp;&nbsp; 
+    <!-- <span (click)="sellerComp()">Seller Login</span>&nbsp; &nbsp; -->
+    <!-- (click)="cartFunc()" -->
+    <!-- <span  [routerLink]="['/cart']">&nbsp;&nbsp;  -->
+    <span class="mx-3" (click)="sellerComp()" *ngIf="!log.isSeller" id="seller">Seller Login</span>&nbsp;
+    &nbsp;
+    <span class="mx-3" (click)="sellerPage()" *ngIf="log.isSeller" class="material-icons" matTooltip="Seller Profile" name='sellerprofile'
+      >person</span
+    >
+
+    &nbsp; &nbsp;
+    <span
+      [routerLink]="['/cart']"
+      class="material-icons mx-3"
+      color="primary"
+      matBadge="{{ badgeCount }}"
+      matBadgeColor="accent"
+      matTooltip="Your Cart"
+      id='shoppingcart'
+    >
+      shopping_cart
+    </span>
+
+    <span
+      [routerLink]="['/orders']"
+      routerLinkActive="router-link-active"
+      class="material-icons mx-3"
+      matTooltip="Past Orders"
+    >
+      folder_special
+    </span>
+
+    &nbsp;&nbsp;
+    <span class="material-icons mx-3" (click)="logOut()" matTooltip="LogOut"
+      >login</span
+    >&nbsp; &nbsp;
+  </ng-container>
+
+  <span>
+    <mat-icon
+      *ngIf="hide && !log.isLogged"
+      [routerLink]="['/login']"
+      (click)="hideContent()"
+      class="mx-3"
+      matTooltip="Login"
+      id="login"
+      >lock</mat-icon
+    >
+  </span>
+  <span>
+    <mat-icon
+      [routerLink]="['/register']"
+      routerLinkActive="router-link-active"
+      (click)="showContent()"
+      *ngIf="show && !log.isLogged"
+      class="mx-3"
+      name='register'
+    >
+      person_add</mat-icon
+    >
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>

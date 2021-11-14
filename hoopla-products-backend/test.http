@@ -1,0 +1,35 @@
+GET http://localhost:2000/products/setupdb
+###
+GET http://localhost:2000/products/getAllProducts
+###
+GET http://localhost:2000/products/product/1001
+###
+Delete http://localhost:2000/products/delete/1001
+###
+POST http://localhost:2000/products/add
+Content-Type: application/json
+
+{
+    "productName": "Asus Zenfone Max Pro M2",
+    "productDescr": "an economical phone by Asus",
+    "rating": 3.5,
+    "category": "Electronics",
+    "price": -14999,
+    "color": "Black",
+    "imageUrl": "Zenfone Max Pro M2.png",
+    "specification": "",
+    "sellerId": "Asus@Seller",
+    "discount": 0.2,
+    "quantity": 661,
+    "shippingCharges": 150
+}
+###
+POST http://localhost:2000/products/update
+Content-Type: application/json
+
+{
+    "productId": "1012",
+    "quantity": 1,
+    "discount": 0.6,
+    "price": 30000
+}

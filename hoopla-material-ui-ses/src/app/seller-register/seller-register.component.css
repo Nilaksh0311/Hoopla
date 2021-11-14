@@ -1,0 +1,55 @@
+.mat-icon{
+  vertical-align: middle;
+  margin-right: 200px;
+}
+.mat-form-field {
+  width: 400px !important;
+}
+.mat-card-title{
+  margin-left: 50px;
+  position: relative;
+  top:5px;
+}
+.mat-card-subtitle{
+  position: relative;
+  left:200px;
+  top:10px;
+}
+
+.mat-card{
+  width: 450px;
+  position: relative;
+  left:500px;
+}
+
+mat-card-header{
+  border-radius:3px;
+}
+
+mat-card-content mat-form-field{
+  margin-top:15px; 
+}
+
+button[type = "submit"]{
+  margin-top:15px; 
+}
+
+form{
+  font-size: 100%;
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+a{
+  cursor:pointer;
+}
+.input{
+  width: 100%;
+}
+
+.mat-card-header{
+  position:relative;
+  margin-left: 120px;
+}

@@ -1,0 +1,59 @@
+<br /><br /><br />
+<div fxFlexOffset="50%" fxFlex="50%">
+  <mat-card>
+    <br />
+    <mat-card-header>
+      <img src = "../../assets/img/hoopla_logo.png" height="60" width = "120">
+    </mat-card-header>
+    <mat-card-title class = "title">Welcome to Hoopla!!</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="login()">
+        <div>
+          <mat-form-field>
+            <mat-label>Email address<sup>*</sup></mat-label>
+            <input matInput placeholder="Email Id" [formControl]="email" name='email'/>
+            <mat-hint>Hint: abc@xyz<i class="fas fa-glass-martini    "></i>.com</mat-hint>
+            <mat-error *ngIf="email.invalid">{{
+              getErrorMessage("email")
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Password"
+              [formControl]="password"
+              name='password'
+            />
+            <mat-hint>Hint: Abc123</mat-hint>
+            <mat-error *ngIf="password.invalid">{{
+              getErrorMessage("password")
+            }}</mat-error>
+          </mat-form-field>
+        </div>
+        <app-loader *ngIf="loading"> </app-loader>
+        <div class = "text-danger">{{errorMessage}}</div>
+        <div>
+          <button
+            mat-flat-button
+            class="example-full-width"
+            [disabled]="email.invalid || password.invalid"
+            type="submit"
+            color="primary"
+            name="logins"
+            value="Login"
+          >Login</button>
+        </div>
+        
+        <p class="text-success">{{ successMessage }}</p>
+        <div class="text-center text-primary">
+          <a (click)="register()">New to Hoopla? Create a account</a>
+        </div>
+      </form>
+      
+    </mat-card-content>
+  </mat-card>
+</div>

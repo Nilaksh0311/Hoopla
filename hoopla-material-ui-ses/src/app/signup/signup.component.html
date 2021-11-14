@@ -1,0 +1,53 @@
+<div fxFlexOffset="50%" fxFlex="50%">
+    <mat-card>
+        <mat-card-header>
+            <img src = "../../assets/img/hoopla_logo.png" height="60px" width = "120px">
+        </mat-card-header>
+        <mat-card-content>
+            <form (ngSubmit) = "signup()">
+                <div>
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Eg. John Doe" [formControl] = "username" name='username'>
+                        <mat-error *ngIf = "username.invalid">{{getErrorMessage('username')}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field >
+                        <mat-label>DOB</mat-label>
+                        <input matInput type = "date" [formControl] = "dob" (change) = "display()" name='dob'>
+                        <mat-error *ngIf="dob.invalid">{{getErrorMessage('dob')}}</mat-error>
+                        <mat-hint> The format is mm/dd/yyyy</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div *ngIf="dobSignal" class = "red">You can't be born in the future!!!</div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput type = "number" [formControl] = "number" name='number'>
+                        <mat-error *ngIf="number.invalid">{{getErrorMessage('number')}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>EmailID</mat-label>
+                        <input matInput type = "text" [formControl] = "emailId" name='email'>
+                        <mat-hint>Hint:abc@123</mat-hint>
+                        <mat-error *ngIf="emailId.invalid">{{getErrorMessage('emailId')}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Enter Password</mat-label>
+                        <input matInput type="password" [formControl] = "password" name='password'>
+                        <mat-hint>Your password must be atleast 8 characters with an uppercase letter,a special character and a number</mat-hint>
+                        <mat-error *ngIf="password.invalid">{{getErrorMessage('password')}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="upr-marigin">
+                    <button mat-raised-button color = "primary" [disabled]="emailId.invalid||password.invalid||number.invalid||username.invalid||dob.invalid||dobSignal" name='registerb'>Register</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

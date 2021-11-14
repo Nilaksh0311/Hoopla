@@ -1,0 +1,215 @@
+<br /><br /><br />
+<div fxFlexOffset="50%" fxFlex="50%">
+  <mat-card>
+    <br />
+    <mat-card-header>
+      <img src = "../../assets/img/hoopla_logo.png" height="60px" width = "120px">
+  </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div>
+          <mat-form-field>
+            <mat-label>Email Id*</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Email Id"
+              formControlName="email"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.email.invalid &&
+                registerForm.controls.email.errors.required
+              "
+              >Email is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.email.invalid &&
+                !registerForm.controls.email.errors.required &&
+                registerForm.controls.email.errors.pattern
+              "
+              >Not a valid mail</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Name*</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Enter Your Name"
+              formControlName="name"
+            />
+            <mat-error
+              *ngIf="
+                registerForm.controls.name.invalid &&
+                registerForm.controls.name.errors.required
+              "
+              >Name is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.name.invalid &&
+                !registerForm.controls.name.errors.required &&
+                registerForm.controls.name.errors.pattern
+              "
+              >Name should only contain alphabets</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Phone Number*</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="Enter Your PhoneNumber"
+              formControlName="phoneNumber"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.phoneNumber.invalid &&
+                registerForm.controls.phoneNumber.errors.required
+              "
+              >PhoneNumber is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.phoneNumber.invalid &&
+                !registerForm.controls.phoneNumber.errors.required &&
+                registerForm.controls.phoneNumber.errors.pattern
+              "
+              >Phone number must be of length 10 digits</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Password*</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Enter your password"
+              formControlName="password"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.password.invalid &&
+                registerForm.controls.password.errors.required
+              "
+              >Password is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.password.invalid &&
+                !registerForm.controls.password.errors.required &&
+                registerForm.controls.password.errors.pattern
+              "
+              >It should contain at least one uppercase, at least one lowercase,
+              at least one digit, at least one special character and minimum 8 characters</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Account Number*</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="Account Number"
+              formControlName="accountNumber"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.accountNumber.invalid &&
+                registerForm.controls.accountNumber.errors.required
+              "
+              >AccountNumber is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.accountNumber.invalid &&
+                !registerForm.controls.accountNumber.errors.required &&
+                registerForm.controls.accountNumber.errors.pattern
+              "
+              >It can contain only digits and length should be 9-18.</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>TAN*</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="TAN"
+              formControlName="tan"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.tan.invalid &&
+                registerForm.controls.tan.errors.required
+              "
+              >Tan is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.tan.invalid &&
+                !registerForm.controls.tan.errors.required &&
+                registerForm.controls.tan.errors.pattern
+              "
+              >TAN should be of format: AAAA12345A</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>GST Number*</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="GST number"
+              formControlName="gstNumber"
+            />
+
+            <mat-error
+              *ngIf="
+                registerForm.controls.gstNumber.invalid &&
+                registerForm.controls.gstNumber.errors.required
+              "
+              >GST Number is required</mat-error
+            >
+            <mat-error
+              *ngIf="
+                registerForm.controls.gstNumber.invalid &&
+                !registerForm.controls.gstNumber.errors.required &&
+                registerForm.controls.gstNumber.errors.pattern
+              "
+              >GST Number should be of format:12ABCDE1234A1Z1</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div>
+          <button
+            mat-flat-button
+            class="example-full-width"
+            [disabled]="registerForm.invalid"
+            type="submit"
+            color="primary"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+      <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+      <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

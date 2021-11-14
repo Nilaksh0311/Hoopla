@@ -1,0 +1,71 @@
+<div *ngIf="details" class="detail-page">
+  <div class="left-section">
+    <div>
+      <img
+        class="image-style"
+        src="../../../assets/img/{{ details.image }}"
+        alt="image"
+      />
+    </div>
+  </div>
+  <div class="right-section">
+    <div class="right-section-details">
+      <span class="heading">{{ details.pCategory }} </span><br />
+      <span class="content">{{ details.pName }} </span><br />
+    </div>
+    <div class="right-section-details">
+      <span class="heading"> Description </span> <br /><span class="content"
+        >{{ details.pDescription }}
+      </span>
+    </div>
+    <div class="right-section-details">
+      <span class="heading">Specification </span
+      ><span class="content">{{ details.specification }} </span>
+      <li><strong>Color</strong> {{ details.color }}</li>
+    </div>
+
+    <div class="right-section-details">
+      Available Quantity:
+      <strong>
+        {{ details.pSeller.pQuantity }}
+      </strong>
+    </div>
+    <div class="right-section-details">
+      {{
+        priceCalculate(details.price, details.pSeller.pDiscount)
+          | currency: "INR"
+      }}
+    </div>
+    <div class="right-section-details">
+      <strike>{{ details.price }}</strike>
+      <br />
+      <strong class="rating"
+        >{{ details.pRating }}
+        <mat-icon class="rating-icon">star_rate</mat-icon>
+      </strong>
+      <div class="right-section-details">
+        <span class="Span"
+          >{{ discountCalculate(details.pSeller.pDiscount) }} % Off
+        </span>
+        + 150 Shipping charges
+      </div>
+      <div class="right-section-details">
+        <button
+          (click)="addToCart(details)"
+          [disabled]="!log.isLogged"
+          mat-raised-button
+          color="primary"
+        >
+          Add to cart
+        </button>
+        &nbsp;
+        <button mat-raised-button color="accent" [routerLink]="['/dashboard']">
+          Back
+        </button>
+        <div *ngIf="!log.isLogged" class="text text-danger mt-3">
+          Please login for adding this item to your cart!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

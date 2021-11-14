@@ -1,0 +1,26 @@
+POST http://localhost:2020/seller/register
+Content-Type: application/json
+
+{
+    "email":'nilaksh0311@gmail.com',
+    "name":'nilaksh',
+    "password":'Nilaksh0311@gmail.com',
+    "phoneNumber":1234567890,
+    "accountNumber":645645748,
+    "tan":"nnhu7",
+    "gstNumber":'567bhygr'
+}
+
+###
+
+GET http://localhost:2020/seller/setupDB
+
+###
+POST http://localhost:2020/seller/login
+Content-Type: application/json
+
+{
+    "email":'nilaksh0311@gmail.com',
+    "password":'Nilaksh0311@gmail.com'
+}
+

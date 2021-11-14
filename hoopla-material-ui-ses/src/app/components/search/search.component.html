@@ -1,0 +1,16 @@
+<ng-container *ngIf="loading; else showContent">
+  <app-loader></app-loader>
+</ng-container>
+
+<ng-template #showContent>
+  <ng-container *ngIf="products.length > 0; else noProductFound"
+    ><card-list [products]="products"></card-list>
+  </ng-container>
+
+  <ng-template #noProductFound>
+    <img
+      class="no-product-found"
+      src="../../../assets/img/no-product-found.png"
+    />
+  </ng-template>
+</ng-template>

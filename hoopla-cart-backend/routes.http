@@ -1,0 +1,32 @@
+GET http://localhost:2001/dashboard/U101
+
+
+####
+
+POST http://localhost:2001/cart
+Content-Type: application/json
+
+{
+    "userId":"U101",
+    "prodId":"P1111",
+    "prodName":"Shoes",
+    "qty":1,
+    "price":10
+}
+
+####
+
+POST http://localhost:2001/dashboard/
+Content-Type: application/json
+
+[{
+    "userId":"U101",
+    "prodId":"P2222",
+    "prodName":"Shoe",
+    "qty":1,
+    "price":10
+}]
+
+####
+
+DELETE http://localhost:2001/delete/U101/P2221

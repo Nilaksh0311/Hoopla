@@ -1,0 +1,11 @@
+
+  .searchIcon{
+   /* width: theme.spacing(9), */
+   height: '100%';
+   position : 'absolute',
+   /* pointerEvents: 'none', */
+   /* display: 'flex', */
+   /* alignItems: 'center';
+   justifyContent: 'center'; */
+ }
+

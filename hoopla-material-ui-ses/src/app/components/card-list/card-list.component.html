@@ -1,0 +1,28 @@
+<div class="card-container">
+  <ng-container *ngFor="let product of products">
+    <mat-card
+      class="card"
+      [routerLink]="['/product-details', product._id]"
+      [state]="product"
+      routerLinkActive="router-link-active"
+    >
+      <img
+        class="imgStyle"
+        height="200px"
+        mat-card-image
+        src="../../assets/img/{{ product.image }}"
+        alt="image"
+      />
+      <mat-card-content>
+        <p>{{ product.pName }}</p>
+        <p>
+          <strong> {{ product.price | currency: "INR" }} </strong>
+          <strong class="rating"
+            >{{ product.pRating }}
+            <mat-icon class="rating-icon">star_rate</mat-icon>
+          </strong>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>

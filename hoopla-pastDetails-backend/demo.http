@@ -1,0 +1,18 @@
+
+GET http://localhost:1000/orders/getAllOrders/user-with-one-1@gmail.com
+
+###
+POST http://localhost:1000/orders/purchaseOrders
+Content-Type: application/json
+
+{           
+    "orderArray": [
+    {
+    "prodId": "2008",
+    "prodName":"shoess",
+    "price":5664,
+    "qty":7
+}],
+
+"userEmail": "user-with-one-1@gmail.com"
+}

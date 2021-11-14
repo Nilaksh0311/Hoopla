@@ -1,0 +1,11 @@
+POST http://localhost:1111/user/login
+Content-Type: application/json
+
+{
+    "email": "pratik@gmail.com",
+    "password": "Abc@1234"
+}
+
+###
+
+GET http://localhost:1111/user/getUserID

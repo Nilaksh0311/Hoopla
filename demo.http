@@ -1,0 +1,41 @@
+POST http://localhost:1111/user/login
+Content-Type: application/json
+
+{
+"email":"nilaksh0311@gmail.com",
+"password":"Nilaksh0311@gmail.com"
+}
+
+###
+GET http://localhost:1111/user/setupDB
+
+###
+POST http://localhost:1111/user/register
+Content-Type: application/json
+
+  {
+    "userId": "U1003",
+    "uCredentials": {
+      "uEmail": "john@gmail.com",
+      "uPass": "John1111"
+    },
+    "uProfile": {
+      "uName": "John",
+      "uDOB": "2018-06-08",
+      "uPhone": 8265839081,
+      "uIsSeller": false,
+    }
+  }
+
+
+
+
+# {
+#     "email":"Axyz@gmail.com",
+#     "name":"Nikki",
+#     "password":"Axyz123",
+#     "dateOfBirth":"07/02/2002",
+#     "phoneNo":"1234567890"
+# }
+
+

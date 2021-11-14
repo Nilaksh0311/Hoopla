@@ -1,0 +1,36 @@
+.mat-card{
+    position: relative;
+    width: 450px;
+    margin-left: 450px;
+    margin-top: 20px;
+    border-color:  #3739CE;
+}
+
+.mat-card-title{
+    margin-left: 100px;
+}
+
+.mat-form-field{
+    width: 400px;
+}
+
+.button{
+    margin-top: 10px;
+    color: #3739CE;
+}
+.mat-icon{
+    margin-left: 175px;
+}
+
+.mat-card-header{
+    margin-left: 120px;
+}
+
+.upr-marigin{
+    margin-top: 15px;
+}
+
+.red{
+    font-size: 13px;
+    color: red;
+}

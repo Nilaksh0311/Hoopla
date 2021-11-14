@@ -1,0 +1,29 @@
+.no-orders {
+  height: 220px;
+  margin: 100px auto 0;
+  display: block;
+}
+
+.card {
+  width: 60%;
+  margin: 100px auto;
+  display: block;
+  border: none;
+}
+
+.table {
+  padding: 20px;
+  text-align: center;
+  min-width: 50%;
+}
+
+.table-header {
+  width: 25%;
+}
+
+.loader {
+  margin-top: 100px;
+}
+.MatButton {
+  margin: 0 auto;
+}

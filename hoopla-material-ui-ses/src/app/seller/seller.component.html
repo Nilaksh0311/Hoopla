@@ -1,0 +1,35 @@
+<br><br><br>
+<div fxFlexOffset="50%" fxFlex="50%" >
+    <mat-card>
+      <br>
+      <mat-card-header>
+        <img src = "../../assets/img/hoopla_logo.png" height="60px" width = "120px">
+    </mat-card-header>
+      <mat-card-content>
+        
+        <form (ngSubmit)="login()">
+          <div>
+            <mat-form-field >
+              <mat-label>Email address<sup>*</sup></mat-label>
+              <input matInput  placeholder="Email Id" [formControl]="email" name='loginemail'>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage("email")}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>Enter your password</mat-label>
+              <input matInput type="password" placeholder="Password" [formControl]="password" name='loginpass'>
+              <mat-error *ngIf="password.invalid">{{getErrorMessage("password")}}</mat-error>
+            </mat-form-field>
+          </div>
+     <div>
+        <button mat-flat-button class="example-full-width" [disabled]="email.invalid || password.invalid" type="submit" color="primary" name='loginbutton'>Login</button>
+     </div>
+     <p class="text-success">{{successMessage}}</p>
+     <div class="text-center text-primary">
+      <a (click)="register()">Don't have an account? Create one!</a>
+     </div>  
+        </form>
+      </mat-card-content> 
+    </mat-card>
+  </div>

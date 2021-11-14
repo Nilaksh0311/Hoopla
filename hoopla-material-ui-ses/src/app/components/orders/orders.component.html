@@ -1,0 +1,59 @@
+<img
+  *ngIf="!loading && orders.length === 0"
+  class="no-orders"
+  src="../../../assets/img/no-previous-order.PNG"
+  alt="No Previous Order"
+/>
+
+<!-- for displaying loader if api takes timeto load -->
+<div class="loader">
+  <app-loader *ngIf="loading"> </app-loader>
+</div>
+
+<mat-card *ngIf="!loading && orders.length > 0" class="card">
+  <table class="table table-striped">
+    <thead class="table-primary">
+      <td class="table-header thead-dark">
+        <strong>Product Name</strong>
+      </td>
+      <td>
+        <strong>Quantity</strong>
+      </td>
+      <td>
+        <strong>Order Date</strong>
+      </td>
+      <td>
+        <strong>Total Cost</strong>
+      </td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>
+          <a
+            [routerLink]="['/product-details', order.prodId]"
+            routerLinkActive="router-link-active"
+          >
+            {{ order.prodName }}
+          </a>
+        </td>
+        <td>
+          {{ order.qty }}
+        </td>
+        <td>
+          {{ order.createdAt | date: "fullDate" }}
+        </td>
+        <td>
+          {{ order.price | currency: "INR" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button
+    [routerLink]="['/dashboard']"
+    class="MatButton"
+    mat-raised-button
+    color="primary"
+  >
+    Continue Shopping
+  </button>
+</mat-card>

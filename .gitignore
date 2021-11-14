@@ -1,0 +1,59 @@
+.vscode
+hoopla-cart-backend/node_modules
+hoopla-cart-backend/package-lock.json
+hoopla-pastDetails-backend/node_modules
+hoopla-pastDetails-backend/package-lock.json
+hoopla-products-backend/node_modules
+hoopla-products-backend/package-lock.json
+hoopla-seller-backend/node_modules
+hoopla-seller-backend/package-lock.json
+hoopla-users-backend/node_modules
+hoopla-users-backend/package-lock.json
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+hoopla-material-ui-ses/dist
+hoopla-material-ui-ses/tmp
+hoopla-material-ui-ses/out-tsc
+# Only exists if Bazel was run
+hoopla-material-ui-ses/bazel-out
+
+# dependencies
+hoopla-material-ui-ses/node_modules
+
+
+# profiling files
+hoopla-material-ui-ses/chrome-profiler-events*.json
+hoopla-material-ui-ses/speed-measure-plugin*.json
+
+# IDEs and editors
+hoopla-material-ui-ses/.idea
+hoopla-material-ui-ses/.project
+hoopla-material-ui-ses/.classpath
+hoopla-material-ui-ses/.c9/
+hoopla-material-ui-ses/*.launch
+hoopla-material-ui-ses/.settings/
+hoopla-material-ui-ses/*.sublime-workspace
+
+# IDE - VSCode
+hoopla-material-ui-ses/.vscode/*
+hoopla-material-ui-ses/!.vscode/settings.json
+hoopla-material-ui-ses/!.vscode/tasks.json
+hoopla-material-ui-ses/!.vscode/launch.json
+hoopla-material-ui-ses/!.vscode/extensions.json
+hoopla-material-ui-ses/.history/*
+
+# misc
+hoopla-material-ui-ses/.sass-cache
+hoopla-material-ui-ses/connect.lock
+hoopla-material-ui-ses/coverage
+hoopla-material-ui-ses/libpeerconnection.log
+hoopla-material-ui-ses/npm-debug.log
+hoopla-material-ui-ses/.yarn-error.log
+hoopla-material-ui-ses/testem.log
+hoopla-material-ui-ses/typings
+
+# System Files
+hoopla-material-ui-ses/.DS_Store
+hoopla-material-ui-ses/Thumbs.db
