@@ -13,47 +13,47 @@ hoopla-users-backend/package-lock.json
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-hoopla-material-ui-ses/dist
-hoopla-material-ui-ses/tmp
-hoopla-material-ui-ses/out-tsc
+hoopla-ui/dist
+hoopla-ui/tmp
+hoopla-ui/out-tsc
 # Only exists if Bazel was run
-hoopla-material-ui-ses/bazel-out
+hoopla-ui/bazel-out
 
 # dependencies
-hoopla-material-ui-ses/node_modules
+hoopla-ui/node_modules
 
 
 # profiling files
-hoopla-material-ui-ses/chrome-profiler-events*.json
-hoopla-material-ui-ses/speed-measure-plugin*.json
+hoopla-ui/chrome-profiler-events*.json
+hoopla-ui/speed-measure-plugin*.json
 
 # IDEs and editors
-hoopla-material-ui-ses/.idea
-hoopla-material-ui-ses/.project
-hoopla-material-ui-ses/.classpath
-hoopla-material-ui-ses/.c9/
-hoopla-material-ui-ses/*.launch
-hoopla-material-ui-ses/.settings/
-hoopla-material-ui-ses/*.sublime-workspace
+hoopla-ui/.idea
+hoopla-ui/.project
+hoopla-ui/.classpath
+hoopla-ui/.c9/
+hoopla-ui/*.launch
+hoopla-ui/.settings/
+hoopla-ui/*.sublime-workspace
 
 # IDE - VSCode
-hoopla-material-ui-ses/.vscode/*
-hoopla-material-ui-ses/!.vscode/settings.json
-hoopla-material-ui-ses/!.vscode/tasks.json
-hoopla-material-ui-ses/!.vscode/launch.json
-hoopla-material-ui-ses/!.vscode/extensions.json
-hoopla-material-ui-ses/.history/*
+hoopla-ui/.vscode/*
+hoopla-ui/!.vscode/settings.json
+hoopla-ui/!.vscode/tasks.json
+hoopla-ui/!.vscode/launch.json
+hoopla-ui/!.vscode/extensions.json
+hoopla-ui/.history/*
 
 # misc
-hoopla-material-ui-ses/.sass-cache
-hoopla-material-ui-ses/connect.lock
-hoopla-material-ui-ses/coverage
-hoopla-material-ui-ses/libpeerconnection.log
-hoopla-material-ui-ses/npm-debug.log
-hoopla-material-ui-ses/.yarn-error.log
-hoopla-material-ui-ses/testem.log
-hoopla-material-ui-ses/typings
+hoopla-ui/.sass-cache
+hoopla-ui/connect.lock
+hoopla-ui/coverage
+hoopla-ui/libpeerconnection.log
+hoopla-ui/npm-debug.log
+hoopla-ui/.yarn-error.log
+hoopla-ui/testem.log
+hoopla-ui/typings
 
 # System Files
-hoopla-material-ui-ses/.DS_Store
-hoopla-material-ui-ses/Thumbs.db
+hoopla-ui/.DS_Store
+hoopla-ui/Thumbs.db
