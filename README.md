@@ -50,4 +50,13 @@ Go to browser and hit the following url -
 http://localhost:4200
 ```
 
-From this your apllication will be up and running .  
+From this your apllication will be up and running .   
+![Screenshot (853)](https://user-images.githubusercontent.com/49091879/141676682-f3d571e9-feb5-459e-a1e2-58333af002bc.png)
+![Screenshot (854)](https://user-images.githubusercontent.com/49091879/141676686-4c3b1cd2-4dec-4a7b-b3ae-7fd38ead35b7.png)
+![Screenshot (855)](https://user-images.githubusercontent.com/49091879/141676687-1b8de46a-28c5-4ef6-81df-a7b3c71e4ab0.png)
+![Screenshot (856)](https://user-images.githubusercontent.com/49091879/141676688-5096f22c-8f90-4125-9fdd-b89817266bba.png)
+![Screenshot (857)](https://user-images.githubusercontent.com/49091879/141676690-a389ad78-b80f-4bb2-9582-801d691b17dc.png)
+![Screenshot (858)](https://user-images.githubusercontent.com/49091879/141676691-24d94556-2d8d-4473-a3d2-32f161b52744.png)
+![Screenshot (859)](https://user-images.githubusercontent.com/49091879/141676692-e1d07485-68e8-401d-a4f2-c63fc7cbf7df.png)
+![Screenshot (860)](https://user-images.githubusercontent.com/49091879/141676693-d1e64869-b0c5-4163-817f-32f60a167fcf.png)
+![Screenshot (861)](https://user-images.githubusercontent.com/49091879/141676695-8c6e03ea-60d6-4968-910e-9167ffe79244.png)
